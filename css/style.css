@@ -26,6 +26,7 @@ img {
 }
 
 .contenedor {
+    width: 95%;
     max-width: 120rem;
     margin: 0 auto;
 }
@@ -87,6 +88,15 @@ h4 {
     display: inline-block;
     text-align: center;
     border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media(min-width:768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
 }
 
 .boton:hover {
@@ -124,6 +134,13 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    .contenido-header {
+        text-align: left;
+    }
 }
 
 .contenido-header h1 {
@@ -134,10 +151,15 @@ h4 {
 }
 
 .barra {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 3rem;
+}
+
+@media(min-width:768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 
@@ -148,18 +170,24 @@ h4 {
 .navegacion a {
     color: white;
     text-decoration: none;
-    font-size: 1.8rem;
-    /** = 18px **/
-    margin-right: 2rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.2rem;
+    display: block;
+}
+
+@media(min-width:768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 1.8rem;
+        /** = 18px **/
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin-right: 0;
+    }
 }
 
 .navegacion a:hover {
     color: #71B100;
-}
-
-.navegacion a:last-of-type {
-    margin-right: 0;
 }
 
 
@@ -167,14 +195,21 @@ h4 {
 =            Iconos Nosotros            =
 ========================================*/
 
-.iconos-nosotros {
-    display: flex;
-    justify-content: space-between;
+@media(min-width:768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .icono {
-    flex-basis: calc( 33.3% - 1rem);
     text-align: center;
+}
+
+@media(min-width:768px) {
+    .icono {
+        flex-basis: calc( 33.3% - 1rem);
+    }
 }
 
 .icono h3 {
@@ -186,17 +221,24 @@ h4 {
 =            Anuncios            =
 =================================*/
 
-.contenedor-anuncios {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media(min-width:768px) {
+    .contenedor-anuncios {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 .anuncio {
-    flex: 0 0 calc( 33.3% - 1rem);
     border: 1px solid #b5b5b5;
     background-color: #f5f5f5;
     margin-bottom: 2rem;
+}
+
+@media(min-width:768px) {
+    .anuncio {
+        flex: 0 0 calc( 33.3% - 1rem);
+    }
 }
 
 .contenido-anuncio {
@@ -251,7 +293,7 @@ h4 {
 }
 
 .contenido-contacto {
-    flex: 1;
+    flex: 0 0 95%;
     color: #ffffff;
 }
 
@@ -264,35 +306,41 @@ h4 {
 =            Seccion Inferior            =
 =========================================*/
 
-.seccion-inferior {
-    display: flex;
-    justify-content: space-between;
-}
-
-.seccion-inferior .blog {
-    flex-basis: 60%;
-}
-
-.seccion-inferior .testimoniales {
-    flex-basis: calc( 40% - 2rem);
+@media(min-width:768px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion-inferior .blog {
+        flex-basis: 60%;
+    }
+    .seccion-inferior .testimoniales {
+        flex-basis: calc( 40% - 2rem);
+    }
 }
 
 .entrada-blog {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 2rem;
+}
+
+@media(min-width:768px) {
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .entrada-blog:last-of-type {
     margin-bottom: 0;
 }
 
-.entrada-blog .imagen {
-    flex-basis: 40%;
-}
-
-.entrada-blog .texto-entrada {
-    flex-basis: calc( 60% - 3rem);
+@media(min-width:768px) {
+    .entrada-blog .imagen {
+        flex-basis: 40%;
+    }
+    .entrada-blog .texto-entrada {
+        flex-basis: calc( 60% - 3rem);
+    }
 }
 
 .texto-entrada a {
@@ -363,8 +411,24 @@ h4 {
 
 .contenedor-footer {
     padding: 3rem;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-footer nav {
+    display: none;
+}
+
+@media(min-width:768px) {
+    .site-footer nav {
+        display: block;
+    }
 }
 
 .copyright {
