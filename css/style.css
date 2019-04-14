@@ -191,6 +191,35 @@ h4 {
 }
 
 
+/*===================================
+=            Mobile Menu            =
+====================================*/
+
+.mobile-menu img {
+    width: 5rem;
+}
+
+@media(min-width:768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.navegacion:target {
+    display: block;
+}
+
+.navegacion {
+    display: none;
+}
+
+@media(min-width:768px) {
+    .navegacion {
+        display: block;
+    }
+}
+
+
 /*=======================================
 =            Iconos Nosotros            =
 ========================================*/
@@ -444,10 +473,12 @@ h4 {
 
 /*----------  Nosotros  ----------*/
 
-.contenido-nosotros {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
+@media(min-width:) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
 }
 
 .contenido-nosotros blockquote {
